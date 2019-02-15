@@ -10,8 +10,4 @@ To run it, download the Arduino IDE and upload it to an Arduino. To see a link o
 <br><br>
 To see an explanation of the math that goes behind this, please read this explanation I wrote in LATEX:
 <br><br
-<object data="http://raymoverse.herokuapp.com/archive/rcautopilot.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="http://raymoverse.herokuapp.com/archive/rcautopilot.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+<img src="http://raymoverse.herokuapp.com/archive/rcautoimg.png">
