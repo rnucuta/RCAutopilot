@@ -8,16 +8,16 @@
 
 
 //for theoretical PID that isn't implemented in this case. the code for it is commented out for the propeller driver
-double Setpoint ; // will be the desired value
-double Input; // photo sensor
-double Output ; //LED
+//double Setpoint; 
+//double Input; 
+//double Output ;
 //PID parameters
-double Kp=0, Ki=10, Kd=0; 
+//double Kp=0, Ki=10, Kd=0; 
 
 
 // i2c imu sensor init
 Adafruit_LSM9DS1 lsm = Adafruit_LSM9DS1();
-PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
+//PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
 
 
 //init 2 servo motors and esc prop motor
@@ -42,10 +42,9 @@ Servo ESC1;
 
 
 //all other relevant variables 
-//imu variables
 double a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
 //past positions of the airplane array. Only stores the first 100 variables then rewrites them
-double past_positions[100][3];
+//double past_positions[100][3];
 //current position
 double x=0;
 double y=0;
@@ -141,19 +140,16 @@ void loop()
   g_x = g.gyro.x;   
   g_y = g.gyro.y;      
   g_z = g.gyro.z;     
-  
-  delay(200);
-
 
   //Countrols math stuff
   
-  diff_time = timee-millis();
+  diff_time = -1*timee+millis();
   timee = millis(); //records time that arduino program has been running into time variable in units of milliseconds
   
 
   velocity();
   positions();
-  recordPosition();
+//  recordPosition();
   
 
   //Controls Rudder Stuff
@@ -166,7 +162,6 @@ void loop()
   //Controls prop motor stuff
   //speed from 1-100
   setSpeed(75);
-
 }
 
 
@@ -262,12 +257,12 @@ void positions(){
 
 
 
-void recordPosition(){
-  //records past positions in a multi-dimensional array called past_positions
-  past_positions[counter][0] = x;
-  past_positions[counter][1] = y;
-  past_positions[counter][2] = z;
-  counter++;
-  int len_past = sizeof(past_positions)/sizeof(past_positions[0]);
-  if(counter==len_past){counter=0;}
-}
+//void recordPosition(){
+//  //records past positions in a multi-dimensional array called past_positions
+//  past_positions[counter][0] = x;
+//  past_positions[counter][1] = y;
+//  past_positions[counter][2] = z;
+//  counter++;
+//  int len_past = sizeof(past_positions)/sizeof(past_positions[0]);
+//  if(counter==len_past){counter=0;}
+//}
