@@ -9,5 +9,5 @@ Arduino code for an RC airplane that the kids in my Applied Science Club built. 
 To run it, download the Arduino IDE and upload it to an Arduino. To see a link of the parts used for this project, click <a href="https://docs.google.com/spreadsheets/d/1VwyDXCYU0SSU_XjS8L3A00dATwfedwvBiznNkNmUgtA/edit?usp=sharing" target="_blank">here</a>.
 <br><br>
 To see an explanation of the math that goes behind this, please read this explanation I wrote in LATEX:
-<br><br
+<br><br>
 <img src="http://raymoverse.herokuapp.com/archive/rcautoimg.png">
